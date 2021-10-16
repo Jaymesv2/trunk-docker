@@ -33,7 +33,9 @@ jobs:
             type=schedule,pattern={{date 'YYYYMMDD'}}
             type=sha
           flavor: |
-            latest=auto
+            latest=true
+            prefix=
+            suffix=
             
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
