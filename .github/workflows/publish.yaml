@@ -29,7 +29,9 @@ jobs:
         with:
           images: jaymesv2/trunk
           tags: |
+            type=ref,event=tag
             type=schedule,pattern={{date 'YYYYMMDD'}}
+            type=sha
           flavor: |
             latest=auto
             
